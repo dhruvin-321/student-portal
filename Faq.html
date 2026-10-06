@@ -8,12 +8,20 @@
 </head>
 
 <body>
+<div id="notificationBanner" class="notification-banner">
+    <span>Welcome to StudentHub! Stay tuned for upcoming events and announcements.</span>
+    <button id="closeBanner" class="close-banner" aria-label="Close notification">&times;</button>
+</div>
+
 
 <header>
     <h1>StudentHub FAQ</h1>
 
-    <nav aria-label="Main navigation">
-        <ul>
+    <nav>
+    <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        ☰
+    </button>
+    <ul class="nav-list" id="navMenu">
             <li><a href="about.html">About</a></li>
             <li><a href="register.html">Register</a></li>
             <li><a href="login.html">Login</a></li>
@@ -21,6 +29,9 @@
             <li><a href="faq.html">FAQ</a></li>
         </ul>
     </nav>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">
+    Dark Mode
+</button>
 </header>
 
 <main>
@@ -28,31 +39,30 @@
 <section>
     <h2>Frequently Asked Questions</h2>
 
-    <article>
-        <h3>What is StudentHub?</h3>
-        <p>
-            StudentHub is a student portal for accessing
-            important student and campus information.
+    <article class="faq-item">
+        <button class="faq-question" type="button">What is StudentHub?</button>
+        <p class="faq-answer">
+            StudentHub is a student portal for accessing important student and campus information.
         </p>
     </article>
 
-    <article>
-        <h3>Who can use StudentHub?</h3>
-        <p>
+    <article class="faq-item">
+        <button class="faq-question" type="button">Who can use StudentHub?</button>
+        <p class="faq-answer">
             Students and authorized administrators can use the portal.
         </p>
     </article>
 
-    <article>
-        <h3>How can I register?</h3>
-        <p>
+    <article class="faq-item">
+        <button class="faq-question" type="button">How can I register?</button>
+        <p class="faq-answer">
             Visit the Register page and fill in the required details.
         </p>
     </article>
 
-    <article>
-        <h3>How can I contact StudentHub?</h3>
-        <p>
+    <article class="faq-item">
+        <button class="faq-question" type="button">How can I contact StudentHub?</button>
+        <p class="faq-answer">
             Visit the Contact page and submit the contact form.
         </p>
     </article>
@@ -64,6 +74,8 @@
 <footer>
     <p>&copy; 2026 StudentHub. All Rights Reserved.</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>

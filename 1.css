@@ -128,3 +128,214 @@ footer {
         padding: 0 15px;
     }
 }
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    transform: translateX(5px);
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    margin: 0;
+    transition: 0.3s;
+}
+.information button {
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.information button:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    background: white;
+    animation: modalAppear 0.3s ease;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@keyframes modalAppear {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.slider {
+    margin-top: 25px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+    display: none;
+    min-height: 100px;
+    transition: 0.3s;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slider button {
+    margin: 10px 5px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider button:hover {
+    transform: scale(1.05);
+} 
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    margin: 10px auto;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    color: #23418f;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 1500px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .nav-list.show-menu {
+        display: flex;
+    }
+}
+.theme-toggle {
+    margin: 10px auto;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+body.dark-theme .card,
+body.dark-theme .information,
+body.dark-theme .slider,
+body.dark-theme .modal-content,
+body.dark-theme section article:not(.card) {
+    background-color: #1f1f1f;
+    color: #f5f5f5;
+}
+
+body.dark-theme .recent {
+    color: #f5f5f5;
+}
+
+/* ===== Notification Banner ===== */
+.notification-banner {
+    background-color: #f59e0b;
+    color: white;
+    text-align: center;
+    padding: 12px 40px 12px 20px;
+    position: relative;
+    font-weight: bold;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.notification-banner.hidden {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.close-banner {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.close-banner:hover {
+    transform: translateY(-50%) scale(1.1);
+}

@@ -8,12 +8,20 @@
 </head>
 
 <body>
+<div id="notificationBanner" class="notification-banner">
+    <span>Welcome to StudentHub! Stay tuned for upcoming events and announcements.</span>
+    <button id="closeBanner" class="close-banner" aria-label="Close notification">&times;</button>
+</div>
+
 
 <header>
     <h1>StudentHub</h1>
 
-    <nav aria-label="Main navigation">
-        <ul>
+    <nav>
+    <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        ☰
+    </button>
+    <ul class="nav-list" id="navMenu">
             <li><a href="about.html">About</a></li>
             <li><a href="register.html">Register</a></li>
             <li><a href="login.html">Login</a></li>
@@ -26,6 +34,9 @@
             <li><a href="feedback.html">Feedback</a></li>
         </ul>
     </nav>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">
+    Dark Mode
+</button>
 </header>
 
 <main>
@@ -67,5 +78,6 @@
     <p>&copy; 2026 StudentHub. All Rights Reserved.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

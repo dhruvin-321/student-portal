@@ -1,0 +1,162 @@
+[
+  {
+    "id": 101,
+    "name": "Aarav Sharma",
+    "rollNo": "CS-2023-01",
+    "department": "Computer Science",
+    "semester": 6,
+    "gpa": 3.92,
+    "email": "aarav.sharma@campus.edu",
+    "status": "Active"
+  },
+  {
+    "id": 102,
+    "name": "Diya Patel",
+    "rollNo": "IT-2023-14",
+    "department": "Information Technology",
+    "semester": 6,
+    "gpa": 3.85,
+    "email": "diya.patel@campus.edu",
+    "status": "Active"
+  },
+  {
+    "id": 103,
+    "name": "Rohan Mehta",
+    "rollNo": "EC-2022-09",
+    "department": "Electronics",
+    "semester": 8,
+    "gpa": 3.68,
+    "email": "rohan.mehta@campus.edu",
+    "status": "Graduated"
+  },
+  {
+    "id": 104,
+    "name": "Ananya Verma",
+    "rollNo": "CS-2024-22",
+    "department": "Computer Science",
+    "semester": 4,
+    "gpa": 3.95,
+    "email": "ananya.verma@campus.edu",
+    "status": "Active"
+  },
+  {
+    "id": 105,
+    "name": "Siddharth Joshi",
+    "rollNo": "ME-2023-40",
+    "department": "Mechanical",
+    "semester": 6,
+    "gpa": 3.42,
+    "email": "siddharth.joshi@campus.edu",
+    "status": "Active"
+  },
+  {
+    "id": 106,
+    "name": "Ishita Rao",
+    "rollNo": "CE-2022-05",
+    "department": "Civil",
+    "semester": 8,
+    "gpa": 3.75,
+    "email": "ishita.rao@campus.edu",
+    "status": "Graduated"
+  },
+  {
+    "id": 107,
+    "name": "Kabir Desai",
+    "rollNo": "IT-2025-11",
+    "department": "Information Technology",
+    "semester": 2,
+    "gpa": 3.30,
+    "email": "kabir.desai@campus.edu",
+    "status": "Active"
+  },
+  {
+    "id": 108,
+    "name": "Sneha Nair",
+    "rollNo": "EC-2024-33",
+    "department": "Electronics",
+    "semester": 4,
+    "gpa": 3.61,
+    "email": "sneha.nair@campus.edu",
+    "status": "Active"
+  },
+  {
+    "id": 109,
+    "name": "Aditya Kulkarni",
+    "rollNo": "CS-2025-07",
+    "department": "Computer Science",
+    "semester": 2,
+    "gpa": 3.88,
+    "email": "aditya.kulkarni@campus.edu",
+    "status": "Active"
+  },
+  {
+    "id": 110,
+    "name": "Meera Iyer",
+    "rollNo": "ME-2022-19",
+    "department": "Mechanical",
+    "semester": 8,
+    "gpa": 3.20,
+    "email": "meera.iyer@campus.edu",
+    "status": "Graduated"
+  },
+  {
+    "id": 111,
+    "name": "Vikram Singh",
+    "rollNo": "CE-2024-18",
+    "department": "Civil",
+    "semester": 4,
+    "gpa": 2.85,
+    "email": "vikram.singh@campus.edu",
+    "status": "Probation"
+  },
+  {
+    "id": 112,
+    "name": "Pooja Hegde",
+    "rollNo": "IT-2023-45",
+    "department": "Information Technology",
+    "semester": 6,
+    "gpa": 3.78,
+    "email": "pooja.hegde@campus.edu",
+    "status": "Active"
+  },
+  {
+    "id": 113,
+    "name": "Rahul Banerjee",
+    "rollNo": "CS-2022-50",
+    "department": "Computer Science",
+    "semester": 8,
+    "gpa": 3.98,
+    "email": "rahul.banerjee@campus.edu",
+    "status": "Graduated"
+  },
+  {
+    "id": 114,
+    "name": "Tanvi Gupta",
+    "rollNo": "EC-2025-15",
+    "department": "Electronics",
+    "semester": 2,
+    "gpa": 3.55,
+    "email": "tanvi.gupta@campus.edu",
+    "status": "Active"
+  },
+  {
+    "id": 115,
+    "name": "Karan Malhotra",
+    "rollNo": "ME-2024-28",
+    "department": "Mechanical",
+    "semester": 4,
+    "gpa": 2.92,
+    "email": "karan.malhotra@campus.edu",
+    "status": "Probation"
+  },
+  {
+    "id": 116,
+    "name": "Riya Sen",
+    "rollNo": "CS-2024-88",
+    "department": "Computer Science",
+    "semester": 4,
+    "gpa": 3.82,
+    "email": "riya.sen@campus.edu",
+    "status": "Active"
+  }
+]

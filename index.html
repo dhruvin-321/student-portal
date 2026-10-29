@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!-- Auth guard -->
+<script>
+  (function(){
+    if(!sessionStorage.getItem('sh_auth')) window.location.replace('./login.html');
+  })();
+</script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StudentHub – University Campus Portal. Manage events, students, courses, FAQs and registrations.">
+  <title>StudentHub — Campus Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- ===== TOPBAR ===== -->
+  <header class="topbar">
+    <div class="topbar-brand">
+      <div class="brand-logo-sm">🎓</div>
+      <div>
+        <div class="brand-title">StudentHub</div>
+        <div class="brand-college">Sardar Vallabhbhai Institute of Technology</div>
+      </div>
+    </div>
+
+    <div class="topbar-right">
+      <button id="btn-theme" class="icon-btn" title="Toggle Dark Mode" aria-label="Toggle theme">🌙</button>
+
+      <div class="user-chip" id="user-chip">
+        <div class="user-av" id="user-av">A</div>
+        <div class="user-info">
+          <span class="user-nm" id="user-nm">Admin</span>
+          <span class="user-rl" id="user-rl">Administrator</span>
+        </div>
+      </div>
+
+      <button class="btn-logout" id="btn-logout">Sign Out</button>
+    </div>
+  </header>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="layout">
+
+    <!-- Sidebar Nav -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-tab="events">
+          <span class="nav-icon">📅</span>
+          <span class="nav-label">Campus Events</span>
+          <span class="nav-badge" id="badge-events">0</span>
+        </button>
+        <button class="nav-item" data-tab="students">
+          <span class="nav-icon">🎓</span>
+          <span class="nav-label">Students</span>
+          <span class="nav-badge" id="badge-students">0</span>
+        </button>
+        <button class="nav-item" data-tab="courses">
+          <span class="nav-icon">📚</span>
+          <span class="nav-label">Courses</span>
+          <span class="nav-badge" id="badge-courses">0</span>
+        </button>
+        <button class="nav-item" data-tab="faqs">
+          <span class="nav-icon">❓</span>
+          <span class="nav-label">FAQs</span>
+          <span class="nav-badge" id="badge-faqs">0</span>
+        </button>
+        <button class="nav-item" data-tab="inquiries">
+          <span class="nav-icon">📝</span>
+          <span class="nav-label">Registration</span>
+          <span class="nav-badge" id="badge-inquiries">0</span>
+        </button>
+      </nav>
+
+      <!-- Sidebar bottom info -->
+      <div class="sidebar-footer">
+        <div class="sf-label">Practical 7 — PHP Form</div>
+        <a href="./practical7/index.php" target="_blank" class="sf-link">Open PHP Form ↗</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Page Title + Controls -->
+      <div class="page-header" id="page-header">
+        <div class="page-title-group">
+          <h1 id="page-title">Campus Events</h1>
+          <span id="page-count" class="page-count">Loading...</span>
+        </div>
+        <div class="page-actions" id="page-actions">
+          <button class="btn-sm btn-outline" id="btn-add-student" style="display:none;">+ Add Student</button>
+          <button class="btn-sm btn-outline" id="btn-export">Export CSV</button>
+        </div>
+      </div>
+
+      <!-- Search & Filter Toolbar -->
+      <div class="toolbar" id="toolbar">
+        <div class="search-box">
+          <span class="search-ic">🔍</span>
+          <input type="text" id="search-inp" class="search-inp" placeholder="Search..." autocomplete="off">
+        </div>
+        <select id="filter-category" class="sel">
+          <option value="ALL">All Categories</option>
+        </select>
+        <select id="filter-status" class="sel" id="sel-status">
+          <option value="ALL">All Status</option>
+        </select>
+        <select id="sort-by" class="sel">
+          <!-- populated per tab -->
+        </select>
+        <select id="page-size" class="sel" style="max-width:80px;">
+          <option value="6" selected>6 / page</option>
+          <option value="9">9 / page</option>
+          <option value="15">15 / page</option>
+        </select>
+        <button class="btn-sm btn-outline" id="btn-reset">↺ Reset</button>
+      </div>
+
+      <!-- Loading -->
+      <div id="state-loading" class="state-box">
+        <div class="spinner"></div>
+        <p>Loading data...</p>
+      </div>
+
+      <!-- Error -->
+      <div id="state-error" class="state-box state-error" style="display:none;">
+        <div style="font-size:2rem;">⚠️</div>
+        <p id="err-msg">Failed to load data.</p>
+        <button class="btn-sm btn-primary" id="btn-retry">Retry</button>
+      </div>
+
+      <!-- Data Area -->
+      <div id="data-area" style="display:none;"></div>
+
+      <!-- Pagination -->
+      <div id="pagination" class="pagination" style="display:none;"></div>
+    </main>
+  </div>
+
+  <!-- ===== MODALS ===== -->
+
+  <!-- Student Profile Modal -->
+  <div class="modal-bg" id="modal-student-view">
+    <div class="modal">
+      <div class="modal-head">
+        <h3>Student Profile</h3>
+        <button class="modal-close" data-close="modal-student-view">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-student-view-body"></div>
+      <div class="modal-foot">
+        <button class="btn-sm btn-outline" data-close="modal-student-view">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add / Edit Student Modal -->
+  <div class="modal-bg" id="modal-student-form">
+    <div class="modal">
+      <div class="modal-head">
+        <h3 id="student-form-title">Add Student</h3>
+        <button class="modal-close" data-close="modal-student-form">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="student-form" class="mform" novalidate>
+          <input type="hidden" id="sf-id">
+          <div class="mform-row">
+            <div class="mfield">
+              <label>Full Name *</label>
+              <input type="text" id="sf-name" placeholder="e.g. Priya Sharma" required>
+              <span class="merr" id="sf-name-err">Name is required (letters only).</span>
+            </div>
+            <div class="mfield">
+              <label>Roll Number *</label>
+              <input type="text" id="sf-roll" placeholder="e.g. CS-2024-88" required>
+              <span class="merr" id="sf-roll-err">Roll number is required.</span>
+            </div>
+          </div>
+          <div class="mfield">
+            <label>Email Address *</label>
+            <input type="email" id="sf-email" placeholder="priya@campus.edu" required>
+            <span class="merr" id="sf-email-err">Valid email required.</span>
+          </div>
+          <div class="mform-row">
+            <div class="mfield">
+              <label>Department</label>
+              <select id="sf-dept">
+                <option value="Computer Science">Computer Science</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Civil">Civil</option>
+              </select>
+            </div>
+            <div class="mfield">
+              <label>Semester</label>
+              <select id="sf-sem">
+                <option>1</option><option>2</option><option>3</option>
+                <option>4</option><option selected>5</option><option>6</option>
+                <option>7</option><option>8</option>
+              </select>
+            </div>
+          </div>
+          <div class="mform-row">
+            <div class="mfield">
+              <label>GPA (0.00 – 4.00)</label>
+              <input type="number" id="sf-gpa" min="0" max="4" step="0.01" value="3.50">
+              <span class="merr" id="sf-gpa-err">GPA must be 0.00 – 4.00.</span>
+            </div>
+            <div class="mfield">
+              <label>Status</label>
+              <select id="sf-status">
+                <option value="Active">Active</option>
+                <option value="Graduated">Graduated</option>
+                <option value="Probation">Probation</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-foot">
+        <button class="btn-sm btn-outline" data-close="modal-student-form">Cancel</button>
+        <button class="btn-sm btn-primary" id="btn-save-student">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Event Register Modal -->
+  <div class="modal-bg" id="modal-event-reg">
+    <div class="modal">
+      <div class="modal-head">
+        <h3>Event Registration</h3>
+        <button class="modal-close" data-close="modal-event-reg">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-event-reg-body"></div>
+      <div class="modal-foot">
+        <button class="btn-sm btn-outline" data-close="modal-event-reg">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toasts" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;display:flex;flex-direction:column;gap:.5rem;pointer-events:none;"></div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

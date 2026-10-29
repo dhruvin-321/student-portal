@@ -1,0 +1,18 @@
+[
+    {
+        "timestamp": "2026-10-17 10:00:00",
+        "name": "Rahul Patel",
+        "email": "rahul.patel@gmail.com",
+        "phone": "9876543210",
+        "course": "Computer Science",
+        "message": "Interested in joining the tech club."
+    },
+    {
+        "timestamp": "2026-10-17 11:15:30",
+        "name": "Sneha Sharma",
+        "email": "sneha.sharma@gmail.com",
+        "phone": "9823456789",
+        "course": "Information Technology",
+        "message": "Looking for practical project guidance."
+    }
+]

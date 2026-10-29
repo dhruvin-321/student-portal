@@ -1,0 +1,146 @@
+[
+  {
+    "id": 201,
+    "question": "How do I register for campus hackathons and workshops?",
+    "answer": "You can register directly from the Events portal by clicking on the event card and submitting your student roll number and team details before the registration deadline.",
+    "category": "Campus Life",
+    "views": 1420,
+    "helpfulCount": 380,
+    "dateUpdated": "2026-10-01"
+  },
+  {
+    "id": 202,
+    "question": "What is the minimum attendance requirement to appear for semester end exams?",
+    "answer": "Students must maintain a minimum of 75% overall attendance in each registered course to be eligible for final semester examinations as mandated by university regulations.",
+    "category": "Academics",
+    "views": 2890,
+    "helpfulCount": 740,
+    "dateUpdated": "2026-09-15"
+  },
+  {
+    "id": 203,
+    "question": "What documents are required during undergraduate admission verification?",
+    "answer": "You need your original 10th and 12th marksheets, transfer certificate, migration certificate, government ID proof (Aadhaar/Passport), and 4 passport-size photographs.",
+    "category": "Admissions",
+    "views": 3100,
+    "helpfulCount": 920,
+    "dateUpdated": "2026-08-10"
+  },
+  {
+    "id": 204,
+    "question": "How does the on-campus placement eligibility criteria work?",
+    "answer": "Generally, students must maintain a CGPA of 7.0 or higher with zero active backlogs to participate in Tier-1 and Tier-2 placement recruitment drives.",
+    "category": "Placements",
+    "views": 4120,
+    "helpfulCount": 1150,
+    "dateUpdated": "2026-10-05"
+  },
+  {
+    "id": 205,
+    "question": "How can I apply for re-evaluation or scrutiny of my exam answer script?",
+    "answer": "Submit the re-evaluation application form through the student examination portal within 10 days of results declaration along with the prescribed scrutiny fee per subject.",
+    "category": "Examinations",
+    "views": 1890,
+    "helpfulCount": 460,
+    "dateUpdated": "2026-09-28"
+  },
+  {
+    "id": 206,
+    "question": "Are merit-based scholarships available for continuing engineering students?",
+    "answer": "Yes, merit scholarships covering up to 50% of tuition fees are awarded to the top 3 rank holders in each engineering department at the end of each academic year.",
+    "category": "Admissions",
+    "views": 2210,
+    "helpfulCount": 630,
+    "dateUpdated": "2026-07-22"
+  },
+  {
+    "id": 207,
+    "question": "How can I issue books and access IEEE journals from the Central Library?",
+    "answer": "Present your student smart card at the circulation desk to borrow up to 4 books. Digital IEEE and ACM portals can be accessed via campus Wi-Fi or student VPN.",
+    "category": "Academics",
+    "views": 1340,
+    "helpfulCount": 310,
+    "dateUpdated": "2026-08-30"
+  },
+  {
+    "id": 208,
+    "question": "What is the procedure to change elective subjects in the current semester?",
+    "answer": "Course change requests must be submitted to the Academic Dean's office through your faculty mentor within the first two weeks of the semester commencement.",
+    "category": "Academics",
+    "views": 980,
+    "helpfulCount": 215,
+    "dateUpdated": "2026-09-04"
+  },
+  {
+    "id": 209,
+    "question": "Does the placement cell provide mock interview and resume preparation sessions?",
+    "answer": "Yes, the Career Development Cell conducts weekly technical mock interviews, aptitude bootcamps, and AI-assisted resume reviews starting from semester 5.",
+    "category": "Placements",
+    "views": 2750,
+    "helpfulCount": 810,
+    "dateUpdated": "2026-09-20"
+  },
+  {
+    "id": 210,
+    "question": "What are the rules regarding campus hostel check-in and night curfews?",
+    "answer": "Hostel gates close at 9:30 PM on weekdays and 10:30 PM on weekends. Late entry or night out passes require written digital permission from the hostel warden.",
+    "category": "Campus Life",
+    "views": 1960,
+    "helpfulCount": 540,
+    "dateUpdated": "2026-08-18"
+  },
+  {
+    "id": 211,
+    "question": "Where can I download the admit card for upcoming mid-term and semester examinations?",
+    "answer": "Admit cards are published on the exam portal 7 days prior to exam start. Make sure your dues and attendance are cleared to enable the download link.",
+    "category": "Examinations",
+    "views": 3400,
+    "helpfulCount": 980,
+    "dateUpdated": "2026-10-10"
+  },
+  {
+    "id": 212,
+    "question": "Can I transfer credits from MOOC platforms like NPTEL or Coursera?",
+    "answer": "Yes, university regulations permit students to earn up to 8 credits via approved NPTEL or SWAYAM 12-week courses with proctored exam certifications.",
+    "category": "Academics",
+    "views": 1650,
+    "helpfulCount": 490,
+    "dateUpdated": "2026-09-12"
+  },
+  {
+    "id": 213,
+    "question": "What medical and health facilities are available inside the university campus?",
+    "answer": "The campus health center operates 24/7 with qualified resident medical officers, an ambulance service, emergency beds, and basic diagnostic facilities.",
+    "category": "Campus Life",
+    "views": 890,
+    "helpfulCount": 280,
+    "dateUpdated": "2026-07-15"
+  },
+  {
+    "id": 214,
+    "question": "When do summer internships start, and can I do an off-campus internship?",
+    "answer": "Summer internships occur between June and July. Off-campus internships are permitted provided the company submits an official offer letter and NOC is approved.",
+    "category": "Placements",
+    "views": 3120,
+    "helpfulCount": 870,
+    "dateUpdated": "2026-10-02"
+  },
+  {
+    "id": 215,
+    "question": "What is the penalty for using unfair means in written or practical examinations?",
+    "answer": "Possession of unauthorized materials or mobile phones leads to strict disciplinary committee review, cancellation of paper, and possible semester suspension.",
+    "category": "Examinations",
+    "views": 1720,
+    "helpfulCount": 390,
+    "dateUpdated": "2026-08-22"
+  },
+  {
+    "id": 216,
+    "question": "Are international students eligible for direct admission under foreign quota?",
+    "answer": "Yes, international candidates and NRI sponsored applicants can apply under the 15% supernumerary quota with equivalent secondary credentials.",
+    "category": "Admissions",
+    "views": 1100,
+    "helpfulCount": 310,
+    "dateUpdated": "2026-06-30"
+  }
+]

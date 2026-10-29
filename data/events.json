@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "title": "AI & Machine Learning Bootcamp",
+    "category": "Workshop",
+    "date": "2026-11-05",
+    "location": "Auditorium A",
+    "attendees": 180,
+    "status": "Upcoming",
+    "description": "Hands-on workshop exploring deep learning architectures, PyTorch models, and real-world AI deployment."
+  },
+  {
+    "id": 2,
+    "title": "National Hackathon: CodeSprint 2026",
+    "category": "Hackathon",
+    "date": "2026-11-12",
+    "location": "Innovation Lab",
+    "attendees": 350,
+    "status": "Upcoming",
+    "description": "36-hour non-stop hackathon building scalable fintech, edtech, and sustainability solutions."
+  },
+  {
+    "id": 3,
+    "title": "Cybersecurity & Ethical Hacking Summit",
+    "category": "Conference",
+    "date": "2026-10-20",
+    "location": "Seminar Hall 2",
+    "attendees": 210,
+    "status": "Ongoing",
+    "description": "Keynotes from industry infosec leaders covering zero-trust security and threat mitigation."
+  },
+  {
+    "id": 4,
+    "title": "Cloud Computing with AWS & Azure",
+    "category": "Workshop",
+    "date": "2026-09-15",
+    "location": "Computer Lab 4",
+    "attendees": 95,
+    "status": "Completed",
+    "description": "Comprehensive guide to microservices, serverless computing, and Kubernetes deployment on cloud platforms."
+  },
+  {
+    "id": 5,
+    "title": "Annual Tech Fiesta: Spectrum 2026",
+    "category": "Cultural",
+    "date": "2026-12-01",
+    "location": "University Grounds",
+    "attendees": 1200,
+    "status": "Upcoming",
+    "description": "Flagship cultural and tech fest with robotics competitions, coding battles, and live musical performances."
+  },
+  {
+    "id": 6,
+    "title": "Web3 & Blockchain Decentralized Future",
+    "category": "Seminar",
+    "date": "2026-10-18",
+    "location": "Hall C",
+    "attendees": 140,
+    "status": "Ongoing",
+    "description": "Demystifying smart contracts, Ethereum tooling, and decentralized finance architectures."
+  },
+  {
+    "id": 7,
+    "title": "Full-Stack Development with React & Node",
+    "category": "Workshop",
+    "date": "2026-08-25",
+    "location": "Lab 2",
+    "attendees": 110,
+    "status": "Completed",
+    "description": "Building modern dynamic full-stack single-page applications with REST and GraphQL APIs."
+  },
+  {
+    "id": 8,
+    "title": "IoT & Smart Cities Expo",
+    "category": "Conference",
+    "date": "2026-11-28",
+    "location": "Exhibition Center",
+    "attendees": 480,
+    "status": "Upcoming",
+    "description": "Showcasing IoT sensors, embedded systems, and automated urban infrastructure innovations."
+  },
+  {
+    "id": 9,
+    "title": "Data Science & Big Data Analytics",
+    "category": "Seminar",
+    "date": "2026-09-02",
+    "location": "Hall A",
+    "attendees": 160,
+    "status": "Completed",
+    "description": "Practical analytical techniques using Spark, Python Pandas, and statistical data modeling."
+  },
+  {
+    "id": 10,
+    "title": "Mobile App UI/UX Design Sprint",
+    "category": "Workshop",
+    "date": "2026-11-18",
+    "location": "Design Studio",
+    "attendees": 85,
+    "status": "Upcoming",
+    "description": "Fast-paced UI/UX design workflow focusing on Figma prototyping, design tokens, and user research."
+  },
+  {
+    "id": 11,
+    "title": "Open Source Contribution Day",
+    "category": "Hackathon",
+    "date": "2026-10-19",
+    "location": "Open Lounge",
+    "attendees": 190,
+    "status": "Ongoing",
+    "description": "Mentored sprint guiding developers to make their first production pull requests on major open-source repos."
+  },
+  {
+    "id": 12,
+    "title": "Quantum Computing Essentials",
+    "category": "Seminar",
+    "date": "2026-12-10",
+    "location": "Auditorium B",
+    "attendees": 130,
+    "status": "Upcoming",
+    "description": "Theoretical and mathematical overview of qubits, quantum gates, and quantum key distribution."
+  },
+  {
+    "id": 13,
+    "title": "Robotics & Autonomous Drones Challenge",
+    "category": "Hackathon",
+    "date": "2026-07-20",
+    "location": "Robotics Arena",
+    "attendees": 220,
+    "status": "Completed",
+    "description": "Team competition designing autonomous line-tracking and obstacle-avoiding surveillance drones."
+  },
+  {
+    "id": 14,
+    "title": "FinTech & Algorithmic Trading Systems",
+    "category": "Conference",
+    "date": "2026-11-22",
+    "location": "Auditorium A",
+    "attendees": 275,
+    "status": "Upcoming",
+    "description": "Quantitative analysis, automated risk management, and algorithmic execution in modern trading."
+  },
+  {
+    "id": 15,
+    "title": "AR/VR Immersive Media Workshop",
+    "category": "Workshop",
+    "date": "2026-10-22",
+    "location": "Media Center",
+    "attendees": 105,
+    "status": "Upcoming",
+    "description": "Interactive experience crafting spatial computing applications with Unity and WebXR."
+  },
+  {
+    "id": 16,
+    "title": "Career Fair & Tech Startup Meet",
+    "category": "Cultural",
+    "date": "2026-06-18",
+    "location": "Convention Hall",
+    "attendees": 850,
+    "status": "Completed",
+    "description": "Networking hub connecting students and graduates with over 40 technology recruiters and seed startups."
+  }
+]

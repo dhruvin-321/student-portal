@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub — Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f7ff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .page-wrapper {
+      display: flex;
+      width: 100%;
+      max-width: 1000px;
+      min-height: 600px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(79,70,229,0.14), 0 4px 16px rgba(0,0,0,0.06);
+      margin: 1.5rem;
+    }
+
+    /* ---- Left Side ---- */
+    .left {
+      flex: 1;
+      background: linear-gradient(155deg, #312e81 0%, #4338ca 50%, #6366f1 100%);
+      padding: 3rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .left::after {
+      content: '';
+      position: absolute;
+      width: 350px; height: 350px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      bottom: -80px; right: -80px;
+    }
+    .left::before {
+      content: '';
+      position: absolute;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      top: -40px; right: 40px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      position: relative; z-index: 1;
+    }
+    .brand-icon {
+      width: 44px; height: 44px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 11px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+    }
+    .brand-name {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: white;
+    }
+    .brand-sub {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.6);
+      font-weight: 500;
+    }
+
+    .left-content { position: relative; z-index: 1; }
+    .left-content h2 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: white;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .left-content h2 span {
+      color: #a5b4fc;
+    }
+    .left-content p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      position: relative; z-index: 1;
+    }
+    .feature-row {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .feature-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #a5b4fc;
+      flex-shrink: 0;
+    }
+    .feature-row span {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.75);
+      font-weight: 500;
+    }
+
+    .left-footer {
+      position: relative; z-index: 1;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ---- Right Side / Form ---- */
+    .right {
+      flex: 0 0 420px;
+      background: white;
+      padding: 2.75rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .form-header {
+      margin-bottom: 1.75rem;
+    }
+    .form-header h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 0.3rem;
+    }
+    .form-header p {
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    /* Quick role chips */
+    .role-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #9ca3af;
+      margin-bottom: 0.55rem;
+    }
+    .role-chips {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .chip {
+      border: 1.5px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 0.6rem 0.4rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      background: #f9fafb;
+    }
+    .chip:hover { border-color: #6366f1; background: #eef2ff; }
+    .chip.active { border-color: #4f46e5; background: #eef2ff; }
+    .chip .icon { font-size: 1.2rem; display: block; margin-bottom: 0.2rem; }
+    .chip .label { font-size: 0.69rem; font-weight: 700; color: #374151; }
+    .chip.active .label { color: #4f46e5; }
+    .chip .sublabel { font-size: 0.62rem; color: #9ca3af; }
+
+    /* Fields */
+    .field { margin-bottom: 1rem; }
+    .field label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 0.4rem;
+    }
+    .field-wrap { position: relative; }
+    .field-wrap input {
+      width: 100%;
+      padding: 0.7rem 0.9rem 0.7rem 2.4rem;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 9px;
+      font-size: 0.875rem;
+      font-family: inherit;
+      color: #111827;
+      background: #f9fafb;
+      outline: none;
+      transition: all 0.15s ease;
+    }
+    .field-wrap input:focus {
+      border-color: #6366f1;
+      background: white;
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+    }
+    .field-wrap .fi {
+      position: absolute;
+      left: 0.78rem; top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.95rem;
+      pointer-events: none;
+    }
+    .field-wrap .eye-btn {
+      position: absolute;
+      right: 0.75rem; top: 50%;
+      transform: translateY(-50%);
+      background: none; border: none;
+      cursor: pointer; font-size: 0.9rem;
+      color: #9ca3af;
+    }
+
+    .error-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #b91c1c;
+      border-radius: 8px;
+      padding: 0.65rem 0.9rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    .btn-login {
+      width: 100%;
+      padding: 0.82rem;
+      background: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 9px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.25rem;
+    }
+    .btn-login:hover { background: #4338ca; }
+    .btn-login:disabled { opacity: 0.7; cursor: not-allowed; }
+    .btn-spinner {
+      width: 16px; height: 16px;
+      border: 2px solid rgba(255,255,255,0.4);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      display: none;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .hint {
+      margin-top: 1.25rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: #9ca3af;
+    }
+    .hint a { color: #4f46e5; font-weight: 600; text-decoration: none; }
+    .hint a:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .page-wrapper { flex-direction: column; margin: 0; border-radius: 0; min-height: 100vh; }
+      .left { padding: 2rem 1.75rem; }
+      .left-content h2 { font-size: 1.4rem; }
+      .features { display: none; }
+      .right { flex: 1; padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- LEFT -->
+    <div class="left">
+      <div class="brand">
+        <div class="brand-icon">🎓</div>
+        <div>
+          <div class="brand-name">StudentHub</div>
+          <div class="brand-sub">Sardar Vallabhbhai Institute of Technology</div>
+        </div>
+      </div>
+
+      <div class="left-content">
+        <h2>University<br><span>Campus Portal</span></h2>
+        <p>Access your academic records, campus events, course information, and submit registration inquiries — all in one place.</p>
+
+        <div class="features">
+          <div class="feature-row"><span class="feature-dot"></span><span>Browse and register for campus events</span></div>
+          <div class="feature-row"><span class="feature-dot"></span><span>View student directory with GPA and department filters</span></div>
+          <div class="feature-row"><span class="feature-dot"></span><span>Explore academic course catalog</span></div>
+          <div class="feature-row"><span class="feature-dot"></span><span>Read frequently asked questions</span></div>
+          <div class="feature-row"><span class="feature-dot"></span><span>Submit and track course registration inquiries</span></div>
+        </div>
+      </div>
+
+      <div class="left-footer">Web Technologies Practical — Semester VI</div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+      <div class="form-header">
+        <h3>Sign In</h3>
+        <p>Enter your credentials to access the portal</p>
+      </div>
+
+      <div class="role-label">Select your role</div>
+      <div class="role-chips" id="role-chips">
+        <div class="chip active" data-role="Admin" data-email="admin@campus.edu" data-pass="admin123">
+          <span class="icon">👑</span>
+          <span class="label">Admin</span>
+          <span class="sublabel">Full access</span>
+        </div>
+        <div class="chip" data-role="Faculty" data-email="faculty@campus.edu" data-pass="faculty123">
+          <span class="icon">👨‍🏫</span>
+          <span class="label">Faculty</span>
+          <span class="sublabel">View &amp; manage</span>
+        </div>
+        <div class="chip" data-role="Student" data-email="student@campus.edu" data-pass="student123">
+          <span class="icon">🎓</span>
+          <span class="label">Student</span>
+          <span class="sublabel">Browse &amp; register</span>
+        </div>
+      </div>
+
+      <div class="error-box" id="error-box">⚠️ <span id="error-msg">Invalid email or password.</span></div>
+
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="inp-email">Email Address</label>
+          <div class="field-wrap">
+            <span class="fi">📧</span>
+            <input type="email" id="inp-email" value="admin@campus.edu" placeholder="your@campus.edu" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="inp-pass">Password</label>
+          <div class="field-wrap">
+            <span class="fi">🔒</span>
+            <input type="password" id="inp-pass" value="admin123" placeholder="Enter password" required>
+            <button type="button" class="eye-btn" id="eye-btn">👁️</button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-login" id="btn-login">
+          <span class="btn-spinner" id="btn-spin"></span>
+          <span id="btn-txt">Sign In</span>
+        </button>
+      </form>
+
+      <div class="hint">
+        Demo credentials auto-filled · <a href="#" id="help-link">Need help?</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const creds = {
+      Admin:   { email: 'admin@campus.edu',   pass: 'admin123',   name: 'Admin User' },
+      Faculty: { email: 'faculty@campus.edu', pass: 'faculty123', name: 'Dr. Rajesh Kulkarni' },
+      Student: { email: 'student@campus.edu', pass: 'student123', name: 'Aarav Sharma' }
+    };
+
+    let role = 'Admin';
+
+    // Role chip selection
+    document.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        role = chip.dataset.role;
+        document.getElementById('inp-email').value = chip.dataset.email;
+        document.getElementById('inp-pass').value = chip.dataset.pass;
+        document.getElementById('error-box').style.display = 'none';
+      });
+    });
+
+    // Password toggle
+    document.getElementById('eye-btn').addEventListener('click', () => {
+      const inp = document.getElementById('inp-pass');
+      inp.type = inp.type === 'password' ? 'text' : 'password';
+    });
+
+    // Form submit
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('inp-email').value.trim();
+      const pass  = document.getElementById('inp-pass').value;
+      const errBox = document.getElementById('error-box');
+      errBox.style.display = 'none';
+
+      const match = Object.entries(creds).find(([, v]) =>
+        v.email.toLowerCase() === email.toLowerCase() && v.pass === pass
+      );
+
+      if (!match) {
+        errBox.style.display = 'block';
+        document.getElementById('error-msg').textContent = 'Incorrect email or password. Please try again.';
+        return;
+      }
+
+      // Show loading
+      const btn = document.getElementById('btn-login');
+      document.getElementById('btn-spin').style.display = 'block';
+      document.getElementById('btn-txt').textContent = 'Signing in…';
+      btn.disabled = true;
+
+      await new Promise(r => setTimeout(r, 900));
+
+      sessionStorage.setItem('sh_auth', JSON.stringify({
+        loggedIn: true,
+        role: match[0],
+        name: match[1].name,
+        email: match[1].email
+      }));
+
+      window.location.href = './index.html';
+    });
+
+    document.getElementById('help-link').addEventListener('click', e => {
+      e.preventDefault();
+      alert('Contact Admin:\nadmin@campus.edu');
+    });
+  </script>
+</body>
+</html>

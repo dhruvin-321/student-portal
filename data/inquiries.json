@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-10-17 10:00:00",
+    "name": "Rahul Patel",
+    "email": "rahul.patel@gmail.com",
+    "phone": "9876543210",
+    "course": "Computer Science",
+    "message": "Interested in joining the competitive programming club and advanced algorithm lab.",
+    "status": "Resolved"
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-10-17 11:15:30",
+    "name": "Sneha Sharma",
+    "email": "sneha.sharma@gmail.com",
+    "phone": "9823456789",
+    "course": "Information Technology",
+    "message": "Looking for practical project guidance regarding cloud computing certification.",
+    "status": "In Review"
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-10-22 14:40:10",
+    "name": "Vikram Deshmukh",
+    "email": "vikram.deshmukh@gmail.com",
+    "phone": "9890123456",
+    "course": "Mechanical",
+    "message": "Inquiry regarding Formula Student electric racecar workshop prerequisites.",
+    "status": "New"
+  },
+  {
+    "id": 4,
+    "timestamp": "2026-10-25 16:05:45",
+    "name": "Anjali Menon",
+    "email": "anjali.menon@gmail.com",
+    "phone": "9812345670",
+    "course": "Civil",
+    "message": "Requesting syllabus details for earthquake resistant structural design course.",
+    "status": "New"
+  }
+]
